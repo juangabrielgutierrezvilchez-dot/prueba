@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida - Destino Alcanzado</title>
+    <link rel="stylesheet" th:href="@{/css/estilo.css}">
+</head>
+<body>
+    <div class="contenedor-principal">
+        <div class="tarjeta-hk">
+            <div class="encabezado-hk glow-azul">
+                <div class="icono-sombrero">✨</div>
+                <h2>¡Bienvenido!</h2>
+                <h3 class="nombre-destacado" th:text="${nombre}">Castro Ramírez, Juan Carlos</h3>
+                <p>Tu registro ha sido grabado en las piedras del tiempo.</p>
+            </div>
+
+            <div class="cuadro-resumen-hk">
+                <p class="frase-exito">⚔️ <strong>¡Muchos éxitos en esta nueva etapa!</strong></p>
+                <p>Posees <span class="resaltado" th:text="${edad}">20</span> años de experiencia y tu maestría es <span class="resaltado" th:text="${carrera}">jugar fútbol</span>.</p>
+            </div>
+
+            <div class="detalles-estudiante">
+                <h4>Inscripción Completada</h4>
+                <ul>
+                    <li><span>👤 Identidad:</span> <strong th:text="${nombre}"></strong></li>
+                    <li><span>📅 Tiempo de origen:</span> <strong th:text="${fechaNacimiento}"></strong></li>
+                    <li><span>🎂 Edad calculada:</span> <strong th:text="${edad} + ' años'"></strong></li>
+                    <li><span>💻 Gremio / Carrera:</span> <strong th:text="${carrera}"></strong></li>
+                    <li><span>🏫 Ciclo actual:</span> <strong th:text="${semestre}"></strong></li>
+                    <li><span>🔮 Pasatiempo:</span> <strong th:text="${hobby}"></strong></li>
+                </ul>
+            </div>
+
+            <!-- BOTÓN RETRO ESTILO MENÚ PARA VOLVER -->
+            <div class="contenedor-boton-volver">
+                <a href="/" class="btn-hk-volver">
+                    ⬅️ Regresar al Inicio
+                </a>
+            </div>
+
+            <div class="pie-hk">
+                IESTP Pichanaki | Formación profesional<br>
+                <small class="sub-pie">Tu futuro comienza aquí</small>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

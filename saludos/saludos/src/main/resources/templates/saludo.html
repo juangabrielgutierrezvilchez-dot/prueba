@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIENVENIDA AL ESTUDIANTE</title>
+    <link rel="stylesheet" th:href="@{/css/estilo.css}">
+</head>
+<body>
+    <div class="contenedor-principal">
+        <div class="tarjeta-hk">
+            <div class="encabezado-hk">
+                <h2>🏫 BIENVENIDO ESTUDIANTE 🎓</h2>
+                <p class="subtitulo">Registra tus datos personales</p>
+            </div>
+            
+            <form action="/bienvenida" method="post" class="formulario-hk">
+                <div class="grupo-input">
+                    <label for="nombre">👤 Apellidos y nombres:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Castro Ramírez, Juan Carlos" required th:value="${nombre}">
+                </div>
+
+                <div class="grupo-input">
+                    <label for="fechaNacimiento">📅 Fecha de nacimiento:</label>
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento" min="1920-01-01" max="2026-12-31" required th:value="${fechaNacimiento}">
+                </div>
+
+                <div class="grupo-input">
+                    <label for="carrera">💻 Especialidad:</label>
+                    <select id="carrera" name="carrera" required>
+                        <option value="" disabled selected>Selecciona tu senda</option>
+                        <option value="Computación e Informática">Computación e Informática</option>
+                        <option value="Enfermería Técnica">Enfermería Técnica</option>
+                        <option value="Administración de Empresas">Administración de Empresas</option>
+                        <option value="Industrias alimentarias">Industrias Alimentarias</option>
+                        <option value="Arquitectura de plataformas y servicios de tecnología de información">Arquitectura de plataformas y 
+                            servicios de tecnología de información</option>
+                            <option value="Mecatronica Automotriz">Mecatronica Automotriz</option>
+                            <option value="Agropecuaria">Agropecuaria</option>
+                    </select>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="semestre">🏫 Ciclo de viaje:</label>
+                    <select id="semestre" name="semestre" required>
+                        <option value="" disabled selected>Selecciona tu nivel</option>
+                        <option value="I semestre">I semestre</option>
+                        <option value="II semestre">II semestre</option>
+                        <option value="III semestre">III semestre</option>
+                        <option value="IV semestre">IV semestre</option>
+                        <option value="V semestre">V semestre</option>
+                        <option value="VI semestre">VI semestre</option>
+                    </select>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="hobby">🔮 Habilidad / Hobby:</label>
+                    <input type="text" id="hobby" name="hobby" placeholder="Videojuegos, explorar, leer" required th:value="${hobby}">
+                </div>
+
+                <button type="submit" class="btn-hk">Inscribir en el Diario</button>
+            </form>
+            <div class="pie-hk">IESTP Pichanaki | Sabiduría Antigua</div>
+        </div>
+    </div>
+</body>
+</html>
