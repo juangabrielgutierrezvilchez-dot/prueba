@@ -248,3 +248,42 @@ body {
     color: #334155;
     font-size: 10px;
 }
+/* ==========================================================================
+   5. DISEÑO RESPONSIVO ADAPTABLE PARA CUALQUIER DISPOSITIVO
+   ========================================================================== */
+
+/* Para Tablets y pantallas medianas (Menores de 1024px) */
+@media (max-width: 1024px) {
+    .contenedor-principal {
+        padding-left: 8%; /* Reduce el espacio izquierdo para no aplastar el cuadro */
+    }
+}
+
+/* Para Celulares y pantallas pequeñas (Menores de 768px) */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        /* En celulares el fondo se fija al centro para que no se deforme Quirrel */
+        background-position: 65% center; 
+    }
+
+    .contenedor-principal {
+        justify-content: center; /* Centra el formulario en celulares para que quepa bien */
+        padding-left: 0; /* Elimina el empuje lateral en pantallas angostas */
+        margin: 10px auto;
+    }
+
+    .tarjeta-hk {
+        width: 100%; /* El formulario ocupa todo el ancho disponible del celular */
+        max-width: 350px; /* Límite elegante para que no se vea gigante */
+        background-color: rgba(17, 21, 29, 0.94); /* Un poco más oscuro para leer mejor en pantallas chicas */
+    }
+
+    .encabezado-hk h2 {
+        font-size: 18px; /* Texto un poquito más pequeño para que no se parta */
+    }
+
+    .formulario-hk {
+        padding: 20px 15px; /* Compacta los márgenes internos */
+    }
+}
